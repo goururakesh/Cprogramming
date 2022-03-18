@@ -1,1 +1,2 @@
-//write a pr
+//write a program
+#include<stdio.h>
