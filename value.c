@@ -7,7 +7,7 @@ void modify(int n)
 int main()
 {
 
-int n=10;
+int n=20;
 printf("before modigy n=%d \n",n);
 modify(n);
 printf("after modify n=%d \n",n);
