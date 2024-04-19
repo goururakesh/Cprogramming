@@ -1,51 +1,101 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'poppins',sans-serif;
-    box-sizing: border-box; 
+    font-family: 'popppins',sans-serif;
+    /* box-sizing: border-box ; */
 }
-
-
-.container
-{
+.container{
+    /* width: 100%; */
+    /* min-height: 100vh; */
+    /* background:linear-gradient(1000deg); */
+     padding: 20px; 
+}
+.todo-app{
     width: 100%;
-    height: 100vh;
-    /* background: fuchsia; */
+    /* max-width: 550px; */
+    /* background: #fff; */
+    margin: 10px auto 10px;
+    padding: 10px 10px 10px;
+    /* border-radius: 5px; */
+}
+.todo-app h2{
+    color: #002765;
     display: flex;
-    align-items: center;
-    justify-content: center;
-
+    /* align-items: center; */
+    margin-bottom: 10px;
 }
-.calculator{
-    background: #3a4456;
-    padding: 30px;
-    border-radius: 20px;
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
 }
-.calculator form input{
-    border: 0;
-    outline:  0;
-    width: 65px;
-    height: 65px;
-    border-radius: 10px;
-    box-shadow: -8px -8px 15px rgba(255,255,255,0.1),5px 5px 15px rgba(0,0,0,0.2);
-    background: transparent;
-    font-size: 20px;
-    color: green;
-    cursor: pointer;
-     margin: 10px;
+.row{
+    display: flex; 
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    background: #A5AF18;
+    /* border-radius: 10px; */
+    padding-left: 10px;
+    /* margin-bottom: 10px; */
 }
-
-form .display{
-    display: flex;
-    justify-content: flex-end;
-    margin: 20px 0;
-}
-form .display input{
-    text-align: right;
+input{
     flex: 1;
-    font-size: 45px;
-    box-shadow: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px;
 }
-form input.equal{
-    width: 145px;
+button{
+    border: none;
+    outline: none;
+    padding: 10px 50px;
+    background: #3377FF;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+ul li{
+    list-style: none;
+    font-size: 10px;
+    padding: 12px 8px 12px 20px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content:' ';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 40%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 9px;
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: #edeef0;
+
+}
+table, th, td {
+  border: 1px solid black;
 }
